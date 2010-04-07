@@ -1,0 +1,72 @@
+Classifying test pedestrians with TOTAL error...
+Classifying test non-pedestrians TOTAL error...
+SUMMARY
+  k = 300
+  threshold = -1.590024e+02
+  auc = 0.9826
+Positive
+  TP: 0.9307 ( 215/ 231)
+  FN: 0.0693 (  16/ 231)
+Negative
+  TN: 0.9040 ( 904/1000)
+  FP: 0.0960 (  96/1000)
+Classifying test pedestrians with partial GRAYSCALE error...
+Classifying test non-pedestrians partial GRAYSCALE error...
+SUMMARY
+  k = 300
+  threshold = -1.275805e+02
+  auc = 0.9694
+Positive
+  TP: 0.9221 ( 213/ 231)
+  FN: 0.0779 (  18/ 231)
+Negative
+  TN: 0.8400 ( 840/1000)
+  FP: 0.1600 ( 160/1000)
+Classifying test pedestrians with partial EDGE error...
+Classifying test non-pedestrians partial EDGE error...
+SUMMARY
+  k = 300
+  threshold = -3.142191e+01
+  auc = 0.9877
+Positive
+  TP: 0.9177 ( 212/ 231)
+  FN: 0.0823 (  19/ 231)
+Negative
+  TN: 0.9810 ( 981/1000)
+  FP: 0.0190 (  19/1000)
+Classifying test pedestrians with partial POSITIVE error...
+Classifying test non-pedestrians partial POSITIVE error...
+SUMMARY
+  k = 300
+  threshold = -2.244199e+03
+  auc = 0.4524
+Positive
+  TP: 0.5152 ( 119/ 231)
+  FN: 0.4848 ( 112/ 231)
+Negative
+  TN: 0.4620 ( 462/1000)
+  FP: 0.5380 ( 538/1000)
+Classifying test pedestrians with partial NEGATIVE error...
+Classifying test non-pedestrians partial NEGATIVE error...
+SUMMARY
+  k = 300
+  threshold = 2.085197e+03
+  auc = 0.6801
+Positive
+  TP: 0.6494 ( 150/ 231)
+  FN: 0.3506 (  81/ 231)
+Negative
+  TN: 0.6120 ( 612/1000)
+  FP: 0.3880 ( 388/1000)
+Classifying test pedestrians with WEIGHTED error...
+Classifying test non-pedestrians WEIGHTED error...
+SUMMARY
+  k = 300
+  threshold = -8.353532e+01
+  auc = 0.9970
+Positive
+  TP: 0.9567 ( 221/ 231)
+  FN: 0.0433 (  10/ 231)
+Negative
+  TN: 0.9850 ( 985/1000)
+  FP: 0.0150 (  15/1000)
