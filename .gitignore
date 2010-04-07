@@ -1,3 +1,6 @@
-set*/
-set*.zip
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.mat
 data
