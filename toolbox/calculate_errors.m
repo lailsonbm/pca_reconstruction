@@ -21,3 +21,8 @@ gray_ped_errors = weights.pgn*pgn_ped_errors - weights.pgp*pgp_ped_errors;
 edge_ped_errors = weights.pen*pen_ped_errors - weights.pep*pep_ped_errors;
 gray_non_errors = weights.pgn*pgn_non_errors - weights.pgp*pgp_non_errors;
 edge_non_errors = weights.pen*pen_non_errors - weights.pep*pep_non_errors;
+
+pos_ped_errors = weights.pgp*pgp_ped_errors + weights.pep*pep_ped_errors;
+neg_ped_errors = weights.pgn*pgn_ped_errors + weights.pen*pen_ped_errors;
+pos_non_errors = weights.pgp*pgp_non_errors + weights.pep*pep_non_errors;
+neg_non_errors = weights.pgn*pgn_non_errors + weights.pen*pen_non_errors;

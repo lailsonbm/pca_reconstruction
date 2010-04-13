@@ -1,0 +1,712 @@
+
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[10pt, conference, compsocconf]{IEEEtran}
+% Add the compsocconf option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  \usepackage[dvipdfm]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+%\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{An analysis of PCA image reconstruction for classification}
+
+%------------------------------------------------------------------------- 
+% change the % on next lines to produce the final camera-ready version 
+\newif\iffinal
+% \finalfalse
+\finaltrue
+\newcommand{\jemsid}{99999}
+%------------------------------------------------------------------------- 
+
+% author names and affiliations
+% use a multiple column layout for up to two different
+% affiliations
+
+\iffinal
+  \author{
+     \IEEEauthorblockN{Guilherme V. Carvalho, Lailson B. Moraes, George D. C. Cavalcanti, Tsang I. R.}
+     \IEEEauthorblockA{Centro de Informática (CIn)\\
+      Universidade Federal de Pernambuco (UFPE)\\
+      Recife, Pernambuco, Brasil\\
+      \texttt{\url{http://cin.ufpe.br/~viisar}}\\
+      \texttt{\url{{gvc,lbm4,gdcc,tir}@cin.ufpe.br}}}
+      
+    }
+\else
+  \author{Sibgrapi paper ID: \jemsid \\ }
+\fi
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+%------------------------------------------------------------------------- 
+% Special Sibgrapi teaser
+% \teaser{%
+%   \includegraphics[width=.8\linewidth]{teaser}
+%   \caption{Overview of our method:\ldots{}}
+%   \label{fig:teaser}
+% }
+%------------------------------------------------------------------------- 
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+The abstract goes here. DO NOT USE SPECIAL CHARACTERS, SYMBOLS, OR MATH IN YOUR TITLE OR ABSTRACT, AND I'M NOT SCREAMING!. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+TODO; component; formatting; style; styling;
+\end{IEEEkeywords}
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introduction}
+% Discuss about PCA, how it works, PCA for compression, image reconstruction
+% Principal Component Analysis (PCA) is currently a commonly used technique in computer vision, specially for dimensionality reduction and feature extraction \cite{}. 
+
+% Still part of description
+% Borja et. al. \cite{borja09} uses PCA for... The rationale is that PCA can compress optimally only the kind of images that were used to compute the analysis, and that any other kind of image will not be compressed well using few attributes \cite{borja09}. So, when we compress an image with PCA and reconstruct it, the difference between the original image and the reconstructed one will be small if the image is similar to the images used to do the PCA and correspondingly greater if the image is different. This difference is referred to as \emph{reconstruction error}.
+
+% Cite what components are used
+% Mention the word component
+% Borja... describe a two-class image classifier that is based on reconstruction error. The classifier is used for object detection, that is, it determines if a given image contains or not contains some kind of object. In other terms, it determines if the image belongs to the positive or to the negative class. To do this, it first perform PCA for positive and negative examples separately. When a new pattern needs to be classified, it is projected on the PCA spaces and subsequently reconstructed. Then, the classifier uses the reconstruction errors to determine the class the pattern belongs to.
+
+In this paper, we analyze the importance of each component to the overall classifier performance in the context of pedestrian detection. We show that grayscale components are less relevant to classification and that they can be eliminated with a significant gain on the execution time and a small impact on classification accuracy. We also propose a weighted variation of the classifier that performs better than the original version. The weights are estimated during the training phase with a genetic algorithm, that looks for the values that best classify the training examples.
+
+This paper is organized as follows: ... 
+
+\section{Image reconstruction with PCA}
+
+The idea of principal component analysis (PCA) seems to have been first proposed by Pearson in 1901 \cite{pearson1901} and was later developed in many works during the last century, being now known as the Karhunen-Loève extension, the Hotelling transform or proper orthogonal decomposition, depending of the field of application \cite{serovich87}. It was popularized in computer vision by Turk and Pentland, that in 1991 used PCA to propose the eigenfaces \cite{turk91}, a face recognition method still relevant and used in current days. % The paper is currently the most cited work in computer vision.
+
+Given a set of samples, PCA yields a set of orthonormal vectors that can be used to linearly project the samples into a new space. This space maximizes the scatter of the projected samples (their variance) and minimizes the least mean square error, that is, it minimizes the difference between the projected sample and its reconstruction back to the original space \cite{shlens09}. This characteristic also makes PCA suitable for data compression and dimensionality reduction. The data can be anything, but in this work we are concerned only with images.
+
+The formulation of PCA is as follows \cite{borja09}. Consider a set of $m$ images, each with $r$ pixels of width and $c$ pixels of height (i.e. of size $r \times c$ pixels). Each image $I_i$ is represented by a column vector $v_i$ of length $rc$. The mean of the set is defined by
+
+\begin{equation}
+  \mu = \frac{1}{m} \sum_{i=1}^m{v_i}
+\end{equation}
+
+\noindent and the covariance matrix $C$ is given by
+
+\begin{equation}
+  C = \sum_{i=1}^m{(v_i - \mu)(v_i - \mu)^T}.
+\end{equation}
+
+PCA applies eigen-decomposition on $C$ and keeps the $k$ eigenvectors ($1 <= k <= rc$) corresponding to the $k$ largest eigenvalues. These eigenvectors are called the \emph{principal components} (PCs) of $C$. It is proven that a projection onto the space defined by these eigenvectors provides the optimal reduced representation of the data, minimizing information loss \cite{shlens09}.
+
+Let $P$ be the matrix whose columns are the first $k$ principal components of $C$. The projection $p$ of an image $u$ into this eigenspace is given by
+
+\begin{equation}
+  p = P (u - \mu).
+\end{equation}
+
+\noindent As the projection is reversible, we can try to recover the original version of a previously projected image. The result is known as the \emph{reconstructed image} \cite{borja09}. The reconstructed image $u'$ of a projection $p$ is
+
+\begin{equation}
+  u' = P^Tp + \mu = P^T P(u - \mu) + \mu.
+\end{equation}
+
+\noindent This process can be interpreted as form of lossy compression and decompression: the reconstructed image usually is not equal to the original one, being just an approximation of it. For this reason, each reconstruction has an associated \emph{reconstruction error}, which can be measured by
+
+\begin{equation}
+  d = |u - u'| = \sqrt{\sum{(u_i - u'_i)^2}}.
+\end{equation}
+
+In general, the more principal components we use to obtain a projection, the less information loss we have, what allows a more accurate reconstruction. Also, the more similar $u$ is to the images that were used to produce $P$, the better the reconstruction will be for a fixed number of eigenvectors \cite{borja09}.
+
+
+\section{Classification using reconstruction}
+
+By definition, PCA looks for the set of PCs that best describe the distribution of the data that is being analyzed. Therefore, these PCs are going to preserve better the information of the images from which PCA was performed, or of those that are similar to them \cite{borja09}. For example, consider a set of PCs obtained only from images that contains pedestrians. They must reconstruct better images of other pedestrians than any other type of images. Conversely, if we have a set of PCs obtained from images of anything except pedestrians, the reconstruction of pedestrian images must be poor. This is illustrated in Figure XX, where we show reconstructions of both grayscale images and edge images with different sets of PCs.
+
+% TODO Figure with Reconstructions
+
+Based on this fact, Borja and Fuentes propose a classifier for pedestrian detection that uses reconstruction errors as the classification criteria \cite{borja09}. In addition to grayscale images, the classifier also use the corresponding computed edge images, since they characterize better the pedestrian silhouette and eliminate background variations, as can be seen in Figure XX. 
+
+In the training phase, PCA must be performed separately for four sets of images, what results in the following sets of PCs:
+
+\begin{itemize}
+	\item The principal components $P_{gp}$ and the mean $\mu_{gp}$ from a set of pedestrian grayscale images.
+	\item The principal components $P_{ep}$ and the mean $\mu_{ep}$ from a set of pedestrian edge images.
+	\item The principal components $P_{gn}$ and the mean $\mu_{gn}$ from a set of non-pedestrian grayscale images.
+	\item The principal components $P_{en}$ and the mean $\mu_{en}$ from a set of non-pedestrian edge images.
+\end{itemize}
+
+In the classification phase, when a new grayscale image has to be classified, the first step is obtain its edge image and perform four reconstructions: one for each set of PCs. Then, the reconstruction errors must be calculated and combined to produce the total error, that is the final classification score. If the total error is greater than or equal to zero, the image is classified as a pedestrian; otherwise, it is classifier as a non-pedestrian. The detailed procedure is described on Algorithm XX.
+
+% TODO Algorithm description
+
+When we analyze how this classifier works, it is easy to understand the role of the PCs generated by the positive samples. As the images contains the recurrent pattern of the target object (pedestrians, in this case), PCA is able to capture it and better reconstruct similar images, i.e., images that contain the object, generating smaller reconstruction errors. The role of negative PCs was more obscure, tough. Since the negative images contain just random objects and does not represent a specific concept, what pattern is there to PCA capture? We initially thought that the errors of reconstructions obtained from the negative PCs had a negligible importance and therefore it would be possible to eliminate them without impacting the classification accuracy. However, our experiments show that is not the case: it turns out that these errors have a major importance on classification.
+
+We found that the value of the negative PCs is not on the pattern PCA captures, but instead it lays out on the pattern PCA does \emph{not} capture, i.e., the target object pattern. In this way, the negative reconstruction errors tend to be high for images that contains the target object while for the same images the positive reconstruction errors tend to be small, contributing to a high total error, what classifies the image correctly. For images that does not contains the target object, it is exactly the opposite. Thus, both components of total error (from positive PCs and from negative PCs) work together for the classification and that is why it is not practicable to construct a classifier that uses only positive reconstruction errors.
+
+However, this does not mean that all the four components have the same relevance to classification. In the proposed classifier, each component contributes equally to the total error, but our experiments show that this relation is not true. Some components have more importance than others and therefore have to be adjusted accordingly. It is also worth noting that the classifier can be made more flexible if we introduce a threshold parameter and compare the classification score (i.e. the total error) agains it, instead of keep it always fixed to zero. In this way, the user can adjust the classifier specificity, depending on his particular application.
+
+
+\section{Experiments}
+
+The classifier was tested with the pedestrian detection task, that is, given a unlabeled image, the classifier must determine if it depicts or not a pedestrian. As said before, we need a set of pedestrians images and a set of non-pedestrian images to train the classifier. This training phase consists of computing image edges and applying PCA to the four image sets separately, what produces four sets of PCs. They will be used to perform the reconstructions in the classification phase.
+
+The pedestrian images were obtained from the MIT CBCL pedestrian database \cite{cbcl}. It contains 924 color images of pedestrians in frontal or rear views, under different scene conditions. These images were converted to grayscale and had a part of the background cropped on the border, remaining with $45 \times 105$ pixels. Doing this, we reduce the non-relevant variation that exists among the images, what allows a better classification.
+
+The non-pedestrian images were extracted from 120 assorted pictures that did not contain pedestrians. Each one was chopped into slices of $45 \times 105$ pixels and 5.000 slices were randomly chosen to compose the negative dataset. This dataset is more than four times larger than the positive dataset and that is related with the representation capacity of each one. The object detection problem is naturally asymmetric \cite{jiang09}, since the positive examples represents a specific type of object while the negative examples represent the \"rest of the world\". That is why we need much more negative examples than positive ones.
+
+To train the classifier, we selected 75\% of the pedestrian images (693 images) and the remaining (231 images) was used  for testing; from the non-pedestrian images, we selected 80\% of the images (4.000 images) for training the classifier and the remaining (1.000 images) was used for testing. This particular scheme was chosen in a empirical way; it yielded the best results among the distributions we tested. The edge images are computed with $x$ and $y$ Sobel filters, which we combine to generate a single edge image. To implement the classifier and the auxiliary procedures, we used the MATLAB 2009b environment. The resulting code is available at \cite{code}.
+
+We start our analysis by investigating the impact of reconstruction errors from the positive PCs and from the negative PCs to the classification. As discussed before, we initially questioned the role of negative PCs, since they are computed from completely uncorrelated images and do not represent a particular object. However, when we classify test sample using reconstruction errors only from the positive PCs or only from the negative PCs (but still using grayscale and edge images), it becomes clear that neither one can perform a satisfactory classification; both classifiers yields a very poor result. But when the errors are combined accordingly to the total reconstruction error expression, then we have an excellent classification. The receiver operating characteristic (ROC) curves of the three classifiers are shown in Figure XX for $k = 100$ (i.e. only the first 100 principal components are being used). We get a similar pattern for all other values of $k$ that were tested.
+
+% TODO Figure with three ROC curves. (Legend should cointain AUCs)
+% It is surprising to see that the classifier from negative PCs even has a better performance than the classifier from positive PCs.
+
+To understand why this happens, it is interesting to see how the reconstruction errors are distributed. In Figure XX, we plot the reconstruction error of each individual test sample in the three situations previously described: in the first plot only the errors from positive PCs are considered, in the second plot only errors from negative PCs are considered and in the third plot we used the total error. It is easy to see that the samples are mixed on the two first plots, indicating that these criteria do not have discriminatory power to correctly separate the samples. Conversely, when the errors are combined, the distribution changes completely and we can notice that samples from different classes are in fact grouped, what makes possible the high classification accuracy we have gotten. Hence, the reconstruction errors from both positive and negative PCs contribute in a significant way to the classification and none of them can be removed.
+
+% TODO Figure with distributions from positive and negative samples
+
+On the other hand, we get very similar ROC curves when the classification considers the reconstruction errors from grayscale PCs and from edge PCs separately (now always using the errors from positive PCs and from negative PCs together). This in shown in Figure XX, which exhibit three ROC curves: one from the classifier that uses only grayscale errors, one from the classifier that uses only edge errors and one from the classifier that considers both (i.e. the total error), all using $k = 100$. Note that the ROC curves from the edge error classifier and from the total error classifier are nearly indistinguishable. In fact, their area under the curve (AUC) are practically equal.
+
+% TODO Figure with three ROC curves. (Legend should cointain AUCs)
+
+Again, we plot the reconstruction error distributions, but now segregating error from grayscale PCs and from edges PCs. These plots are shown in Figure XX, that also displays a plot of the combined errors distribution (i.e. grayscale and edge errors summed). At this time, we get a different scenario. All the three plots exhibit a clear boundary that separate samples from different classes. This indicated that there is a lot of redundancy between errors from grayscale PCs and from edge PCs and one of them can be safely removed from the classifier with a minor impact on classification accuracy. Our results indicate that the errors from grayscale PCs generally yields a slightly worse result, as shown in the Table XX. Therefore, it is possible to compose a classifier only with the edge errors and speed up the classification significantly (since two reconstructions will not have to be computed anymore) losing less than $1\%$ of the classification accuracy. Actually, the classifier based only on the reconstruction errors from the edge PCs sometimes performed even better in our experiments (when $k >= 200$), as also shown in Table XX.
+
+% TODO Figure with distributions from grayscale and edges
+
+% TODO Table comparing AUCs
+% K GRAY  EDGE  TOTAL
+% 400 0.9611  0.9863  0.9744
+% 300 0.9694  0.9877  0.9826
+% 200 0.9768  0.9905  0.9877
+% 100 0.9851  0.9944  0.9948
+% 50  0.9905  0.9956  0.9972
+% 25  0.9929  0.9913  0.9984
+
+
+
+% From the description above, we notice that each reconstruction contributes equally to the total error. Therefore, it is assumed that each one has the same relevance to the classification, what, as our experiments show, it is not the case. We found that some reconstructions contribute more to the classification and it is possible to improve the classification accuracy by adjusting their weights when computing the total error.
+% but, as our experiments show, this is not the case. It seems 
+% To have a better understanding on how this classifier works, we
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command, the
+% \label for the overall figure must come after \caption.
+% \hfil must be used as a separator to get equal spacing.
+% The subfigure.sty package works much the same way, except \subfigure is
+% used instead of \subfloat.
+%
+%\begin{figure*}[!t]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+
+
+% An example of a floating table. Note that, for IEEE style tables, the 
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that IEEE does not put floats in the very first column - or typically
+% anywhere on the first page for that matter. Also, in-text middle ("here")
+% positioning is not used. Most IEEE journals/conferences use top floats
+% exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the \fnbelowfloat
+% command of the stfloats package.
+
+
+
+\section{Conclusion}
+
+The dimensions affect not in a linear way, e.g., the more the better is wrong.
+
+% conference papers do not normally have an appendix
+
+
+% use section* for acknowledgement
+\section*{Acknowledgment}
+
+
+The authors would like to thank...
+more thanks here
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+%\begin{thebibliography}{1}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
+
+
+

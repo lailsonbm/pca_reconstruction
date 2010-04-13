@@ -138,8 +138,7 @@ clear scores classes threshold;
 
 %%
 
-clear weights;
-load data/weights.mat;
+load_weights;
 calculate_errors;
 
 disp('Classifying test pedestrians with WEIGHTED error...');
