@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  13 APR 2010 10:26
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  13 APR 2010 11:05
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -225,13 +225,33 @@ LaTeX Warning: Citation `jiang09' on page 3 undefined on input line 548.
 
 LaTeX Warning: Citation `code' on page 3 undefined on input line 550.
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 570.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 570.
 
-LaTeX Warning: Reference `total_error' on page 3 undefined on input line 579.
+LaTeX Warning: Reference `total_error' on page 3 undefined on input line 589.
 
 
-LaTeX Warning: Reference `ga' on page 3 undefined on input line 579.
+LaTeX Warning: Reference `ga' on page 3 undefined on input line 589.
 
-[3] (./paper.bbl)
+[3]
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+ (./paper.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -243,37 +263,37 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
-
-] (./paper.aux)
+[4] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1805 strings out of 493848
- 27603 string characters out of 3149207
- 85969 words of memory out of 3000000
- 5110 multiletter control sequences out of 15000+200000
- 36415 words of font info for 67 fonts, out of 3000000 for 9000
+ 1824 strings out of 493848
+ 27802 string characters out of 3149207
+ 87986 words of memory out of 3000000
+ 5122 multiletter control sequences out of 15000+200000
+ 39962 words of font info for 75 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
  28i,10n,21p,1218b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
-ve/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-09/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/200
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2009/
-texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2009/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/
-type1/urw/times/utmbi8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utm
-ri8a.pfb>
-Output written on paper.pdf (4 pages, 151242 bytes).
+live/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
+ve/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
+/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
+009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/200
+9/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2009/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2009/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2009/texm
+f-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2009/texmf-dist/
+fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type
+1/urw/times/utmbi8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on paper.pdf (4 pages, 169230 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
