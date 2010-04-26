@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  13 APR 2010 11:05
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  25 APR 2010 20:38
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -178,64 +178,20 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 424.
 Missing character: There is no Ã in font ptmri7t!
 Missing character: There is no ¡ in font ptmri7t!
-
-
-LaTeX Warning: Citation `pearson1901' on page 1 undefined on input line 466.
-
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¨ in font ptmr7t!
-
-LaTeX Warning: Citation `serovich87' on page 1 undefined on input line 466.
-
-
-LaTeX Warning: Citation `turk91' on page 1 undefined on input line 466.
+ [1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-LaTeX Warning: Citation `shlens09' on page 1 undefined on input line 468.
-
-
-LaTeX Warning: Citation `borja09' on page 1 undefined on input line 470.
-
-
-LaTeX Warning: Citation `shlens09' on page 1 undefined on input line 482.
-
-
-LaTeX Warning: Citation `borja09' on page 1 undefined on input line 490.
-
-[1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
-
-LaTeX Warning: Citation `borja09' on page 2 undefined on input line 502.
-
-
-LaTeX Warning: Citation `borja09' on page 2 undefined on input line 507.
-
-
-LaTeX Warning: Citation `borja09' on page 2 undefined on input line 511.
-
-[2]
-
-LaTeX Warning: Citation `cbcl' on page 3 undefined on input line 546.
-
-
-LaTeX Warning: Citation `jiang09' on page 3 undefined on input line 548.
-
-
-LaTeX Warning: Citation `code' on page 3 undefined on input line 550.
-
+] [2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 570.
+(Font)              <8> on input line 601.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 570.
-
-LaTeX Warning: Reference `total_error' on page 3 undefined on input line 589.
+(Font)              <6> on input line 601.
 
 
-LaTeX Warning: Reference `ga' on page 3 undefined on input line 589.
+LaTeX Warning: Citation `ga' on page 4 undefined on input line 620.
 
-[3]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -248,9 +204,9 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
- (./paper.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+[4] (./paper.bbl
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 51.
 )
 
 ** Conference Paper **
@@ -263,17 +219,17 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4] (./paper.aux)
+[5] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1824 strings out of 493848
- 27802 string characters out of 3149207
- 87986 words of memory out of 3000000
- 5122 multiletter control sequences out of 15000+200000
- 39962 words of font info for 75 fonts, out of 3000000 for 9000
+ 1832 strings out of 493848
+ 27885 string characters out of 3149207
+ 88022 words of memory out of 3000000
+ 5127 multiletter control sequences out of 15000+200000
+ 40874 words of font info for 78 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
  28i,10n,21p,1218b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -291,9 +247,9 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on paper.pdf (4 pages, 169230 bytes).
+Output written on paper.pdf (5 pages, 176252 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
