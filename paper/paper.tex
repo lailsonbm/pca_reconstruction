@@ -457,9 +457,11 @@ TODO; component; formatting; style; styling;
 % Mention the word component
 % Borja... describe a two-class image classifier that is based on reconstruction error. The classifier is used for object detection, that is, it determines if a given image contains or not contains some kind of object. In other terms, it determines if the image belongs to the positive or to the negative class. To do this, it first perform PCA for positive and negative examples separately. When a new pattern needs to be classified, it is projected on the PCA spaces and subsequently reconstructed. Then, the classifier uses the reconstruction errors to determine the class the pattern belongs to.
 
-In this paper, we analyze the importance of each component to the overall classifier performance in the context of pedestrian detection. We show that grayscale components are less relevant to classification and that they can be eliminated with a significant gain on the execution time and a small impact on classification accuracy. We also propose a weighted variation of the classifier that performs better than the original version. The weights are estimated during the training phase with a genetic algorithm, that looks for the values that best classify the training examples.
+Pedestrian detection systems have been widely used and developed throughout computer vision history. Ranging from still image detection to automated car breaking systems, it is becoming a usual task in our lives.
 
-This paper is organized as follows: ... 
+In this paper we describe a pedestrian detection proposed by Malangon-Borja \cite{borja09} that classifies an image based on how much its reconstruction is different from the original one, that is, it classifies based on the image reconstruction error. We analyze how it works and how its original performance can be improved, as well as its detection times, by using weights on the reconstruction errors and reducing the number of calculations made by the algorithm, respectively.
+
+The remaining of the article is divided as follows. Section 2 describes a image reconstruction technique using PCA. Section 3 describes how to use image reconstruction to classify images. Section 4 presents our experiments and discussions. In section 5 conclusions are presented and we indicate areas of future research.
 
 \section{Image reconstruction with PCA}
 
