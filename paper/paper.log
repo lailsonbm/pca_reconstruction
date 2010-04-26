@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  25 APR 2010 20:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  26 APR 2010 00:14
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -183,15 +183,43 @@ Missing character: There is no ¨ in font ptmr7t!
  [1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] [2] [3]
+] [2]
+<roc_pos_vs_neg.pdf, id=20, 411.5375pt x 321.2pt>
+File: roc_pos_vs_neg.pdf Graphic file (type pdf)
+ <use roc_pos_vs_neg.pdf>
+<dist_pos_vs_neg.pdf, id=21, 281.05pt x 702.625pt>
+File: dist_pos_vs_neg.pdf Graphic file (type pdf)
+ <use dist_pos_vs_neg.pdf>
+[3 <./roc_pos_vs_neg.pdf>]
+Underfull \vbox (badness 1442) has occurred while \output is active []
+
+
+<roc_gray_vs_edge.pdf, id=37, 411.5375pt x 321.2pt>
+File: roc_gray_vs_edge.pdf Graphic file (type pdf)
+ <use roc_gray_vs_edge.pdf>
+<dist_gray_vs_edge.pdf, id=38, 281.05pt x 702.625pt>
+File: dist_gray_vs_edge.pdf Graphic file (type pdf)
+
+<use dist_gray_vs_edge.pdf>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 601.
+(Font)              <8> on input line 621.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 601.
+(Font)              <6> on input line 621.
 
 
-LaTeX Warning: Citation `ga' on page 4 undefined on input line 620.
+LaTeX Warning: Citation `ga' on page 4 undefined on input line 640.
 
+[4 <./dist_pos_vs_neg.pdf> <./roc_gray_vs_edge.pdf>]
+Underfull \vbox (badness 1442) has occurred while \output is active []
+
+
+<chart_auc_vs_k.pdf, id=94, 411.5375pt x 321.2pt>
+File: chart_auc_vs_k.pdf Graphic file (type pdf)
+ <use chart_auc_vs_k.pdf>
+<dist_gray_vs_edge_weighted.pdf, id=95, 411.5375pt x 321.2pt>
+File: dist_gray_vs_edge_weighted.pdf Graphic file (type pdf)
+
+<use dist_gray_vs_edge_weighted.pdf>
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -204,10 +232,10 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
-[4] (./paper.bbl
+ [5 <./dist_gray_vs_edge.pdf> <./chart_auc_vs_k.pdf>] (./paper.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 51.
-)
+ [6 <./dist_gray_vs_edge_weighted.pdf>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -219,16 +247,21 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5] (./paper.aux)
+[7
+
+] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 1832 strings out of 493848
- 27885 string characters out of 3149207
- 88022 words of memory out of 3000000
- 5127 multiletter control sequences out of 15000+200000
+ 1869 strings out of 493848
+ 28730 string characters out of 3149207
+ 87062 words of memory out of 3000000
+ 5158 multiletter control sequences out of 15000+200000
  40874 words of font info for 78 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
  28i,10n,21p,1218b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -247,9 +280,9 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on paper.pdf (5 pages, 176252 bytes).
+Output written on paper.pdf (7 pages, 1480077 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
