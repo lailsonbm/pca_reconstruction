@@ -56,16 +56,4 @@ R.~C. Gonzalez and R.~E. Woods, \emph{Digital Image Processing}.\hskip 1em plus
   0.5em minus 0.4em\relax Boston, MA, USA: Addison-Wesley Longman Publishing
   Co., Inc., 2001.
 
-\bibitem{code}
-\BIBentryALTinterwordspacing
-G.~Carvalho and L.~Moraes. {Implementation Code for the PCA Reconstruction
-  Classifier}. [Online]. Available:
-  \url{http://github.com/lailsonbm/pca_reconstruction}
-\BIBentrySTDinterwordspacing
-
-\bibitem{li05}
-M.~Li and B.~Yuan, ``{2D-LDA: A statistical linear discriminant analysis for
-  image matrix},'' \emph{Pattern Recognition Letters}, vol.~26, no.~5, pp.
-  527--532, 2005.
-
 \end{thebibliography}

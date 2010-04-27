@@ -1,50 +1,43 @@
 \relax 
 \citation{borja09}
 \citation{sirovich87}
-\citation{sirovich87}
 \citation{turk91}
 \citation{shlens09}
 \citation{borja09}
 \citation{shlens09}
-\citation{borja09}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Image reconstruction with PCA}{1}}
 \citation{borja09}
 \citation{borja09}
-\citation{borja09}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Classification using reconstruction}{2}}
 \newlabel{total_error}{{6}{2}}
+\newlabel{weighted_total_error}{{8}{2}}
 \citation{cbcl}
 \citation{jiang09}
 \citation{gonzalez01}
-\citation{code}
-\newlabel{weighted_total_error}{{8}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Experiments}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparison of positive and negative ROC curves. From left to right: the first curve (green) refers to a classifier that uses the total reconstruction error (equation 6\hbox {}) and has an AUC of 0.995; the second curve (red) refers to a classifier that uses only the reconstruction errors from negative PCs ($d_{gn}$ and $d_{en}$) and has an AUC of 0.690; and the third curve (blue) refers to a classifier that uses only the errors from positive PCs ($d_{gp}$ and $d_{ep}$) and has an AUC of 0.444. On the three classifiers, only the first 100 principal components are being used, that is, $k=100$. Both positive and negative classifiers yields a poor result, far from the full classifier performance. It is surprising to see that the negative classifier even got a better result than the positive one.}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparison of positive and negative ROC curves. From left to right: the first curve (green) refers to a classifier that uses the total reconstruction error (6\hbox {}) and has an AUC of 0.995; the second curve (red) refers to a classifier that uses only the reconstruction errors from negative PCs ($d_{gn}$ and $d_{en}$) and has an AUC of 0.690; and the third curve (blue) refers to a classifier that uses only the errors from positive PCs ($d_{gp}$ and $d_{ep}$) and has an AUC of 0.444. On the three classifiers, only the first 100 principal components are being used, that is, $k=100$. Both positive and negative classifiers yields a poor result, far from the full classifier performance. It is surprising to see that the negative classifier even got a better result than the positive one.}}{3}}
 \newlabel{roc_pos_vs_neg}{{1}{3}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces AUCs for grayscale, edge and total errors classifiers}}{4}}
-\newlabel{table_gray_vs_edge}{{I}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Comparison of reconstruction errors distributions. The first chart plots the errors of train samples when only the reconstructions from positive PCs are being considered. The second chart plots the errors only for the negative reconstructions. And the third chart plots the distribution of the total reconstruction error. Note that the errors are mixed on the first two charts; classify the samples based on them is a hard task. On the other hand, the third chart show well defined clusters of errors, what makes possible a good classification. This explains the curves of Figure\nobreakspace  {}1\hbox {}.}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Comparison of reconstruction errors distributions. The first chart plots the errors of test samples when only the reconstructions from positive PCs are being considered. The second chart plots the errors only for the negative reconstructions. And the third chart plots the distribution of the total reconstruction error. Note that the errors are mixed on the first two charts; classify the samples based on them is a hard task. On the other hand, the third chart show well defined clusters of errors, what makes possible a good classification. This explains the curves of Figure\nobreakspace  {}1\hbox {}.}}{4}}
 \newlabel{dist_pos_vs_neg}{{2}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of grayscale and edge ROC curves. The green curve refers to a classifier that uses the total reconstruction error (equation 6\hbox {}) and has an AUC of 0.995; the red curve refers to a classifier that uses only the reconstruction errors from edge PCs ($d_{ep}$ and $d_{en}$) and has an AUC of 0.994; and the blue curve uses only the errors from grayscale PCs ($d_{gp}$ and $d_{gn}$) and has an AUC of 0.985. On the three classifiers, only the first 100 principal components are being used, that is, $k=100$. Note that the scale is different of that from Figure\nobreakspace  {}1\hbox {}; we approximated the upper left corner to better show the difference between the curves, that are very similar.}}{5}}
-\newlabel{roc_gray_vs_edge}{{3}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of reconstruction errors distributions. The first chart plots the errors of positive and negative train samples when only the reconstructions from grayscale PCs are being considered. The second chart plots the errors only for the edge reconstructions. And the third chart plots the distribution of the total reconstruction error. Note that the three charts show a clear boundary between errors from positive and from negative samples.}}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of grayscale and edge ROC curves. The green curve refers to a classifier that uses the total reconstruction error (6\hbox {}) and has an AUC of 0.995; the red curve refers to a classifier that uses only the reconstruction errors from edge PCs ($d_{ep}$ and $d_{en}$) and has an AUC of 0.994; and the blue curve uses only the errors from grayscale PCs ($d_{gp}$ and $d_{gn}$) and has an AUC of 0.985. On the three classifiers, only the first 100 principal components are being used, that is, $k=100$. Note that the scale is different of that from Figure\nobreakspace  {}1\hbox {}; we approximated the upper left corner to better show the small difference between the curves.}}{4}}
+\newlabel{roc_gray_vs_edge}{{3}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of reconstruction errors distributions. The first chart plots the errors of positive and negative test samples when only the reconstructions from grayscale PCs are being considered. The second chart plots the errors only for the edge reconstructions. And the third chart plots the distribution of the total reconstruction error. Note that the three charts show a clear boundary between errors from positive and from negative samples.}}{5}}
 \newlabel{dist_gray_vs_edge}{{4}{5}}
-\citation{li05}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces AUCs for grayscale, edge and total errors classifiers}}{5}}
+\newlabel{table_gray_vs_edge}{{I}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{5}}
 \bibstyle{IEEEtran}
 \bibdata{paper}
 \bibcite{borja09}{1}
 \bibcite{sirovich87}{2}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Comparison of weighted and original classifiers AUCs for different values of $k$. The AUCs of the weighted classifier are more stable when $k$ varies.}}{6}}
-\newlabel{auc_vs_k}{{5}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Distribution of the weighted total reconstruction errors for positive and for negative training samples, for $k=100$. Compare it with the third chart of Figure\nobreakspace  {}2\hbox {}. Here the boundary between errors from positive and from negative samples is much clearer.}}{6}}
-\newlabel{dist_weighted}{{6}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{6}}
-\@writefile{toc}{\contentsline {section}{References}{6}}
 \bibcite{turk91}{3}
 \bibcite{shlens09}{4}
 \bibcite{cbcl}{5}
 \bibcite{jiang09}{6}
 \bibcite{gonzalez01}{7}
-\bibcite{code}{8}
-\bibcite{li05}{9}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Comparison of weighted and original classifiers AUCs for different values of $k$. The AUCs of the weighted classifier are more stable when $k$ varies.}}{6}}
+\newlabel{auc_vs_k}{{5}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Distribution of the weighted total reconstruction errors for positive and for negative training samples, for $k=100$. Compare it with the third chart of Figure\nobreakspace  {}2\hbox {}. Here the boundary between errors from positive and from negative samples is much clearer.}}{6}}
+\newlabel{dist_weighted}{{6}{6}}
+\@writefile{toc}{\contentsline {section}{References}{6}}

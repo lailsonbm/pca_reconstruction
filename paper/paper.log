@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  27 APR 2010 11:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  27 APR 2010 13:22
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -178,37 +178,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 423.
 Missing character: There is no Ã in font ptmri7t!
 Missing character: There is no ¡ in font ptmri7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
  [1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no Ÿ in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
  [2]
 <roc_pos_vs_neg.pdf, id=20, 411.5375pt x 321.2pt>
 File: roc_pos_vs_neg.pdf Graphic file (type pdf)
  <use roc_pos_vs_neg.pdf>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 587.
+(Font)              <8> on input line 586.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 587.
+(Font)              <6> on input line 586.
 
-[3 <./roc_pos_vs_neg.pdf>] <dist_pos_vs_neg.pdf, id=39, 281.05pt x 702.625pt>
+<dist_pos_vs_neg.pdf, id=21, 281.05pt x 702.625pt>
 File: dist_pos_vs_neg.pdf Graphic file (type pdf)
+ <use dist_pos_vs_neg.pdf>
+Underfull \vbox (badness 1552) has occurred while \output is active []
 
-<use dist_pos_vs_neg.pdf> <roc_gray_vs_edge.pdf, id=40, 411.5375pt x 321.2pt>
-File: roc_gray_vs_edge.pdf Graphic file (type pdf)
-
-<use roc_gray_vs_edge.pdf>
-<dist_gray_vs_edge.pdf, id=41, 281.05pt x 702.625pt>
-File: dist_gray_vs_edge.pdf Graphic file (type pdf)
-
-<use dist_gray_vs_edge.pdf>
-
-LaTeX Warning: Reference `ga' on page 4 undefined on input line 639.
-
+ [3 <./roc_pos_vs_neg.pdf>]
 
 LaTeX Warning: Text page 4 contains only floats.
 
@@ -216,19 +206,27 @@ LaTeX Warning: Text page 4 contains only floats.
 Overfull \vbox (4.35196pt too high) has occurred while \output is active []
 
 
-[4 <./dist_pos_vs_neg.pdf>]
+<roc_gray_vs_edge.pdf, id=40, 411.5375pt x 321.2pt>
+File: roc_gray_vs_edge.pdf Graphic file (type pdf)
+ <use roc_gray_vs_edge.pdf>
+<dist_gray_vs_edge.pdf, id=41, 281.05pt x 702.625pt>
+File: dist_gray_vs_edge.pdf Graphic file (type pdf)
+
+<use dist_gray_vs_edge.pdf>
+
+LaTeX Warning: Reference `ga' on page 4 undefined on input line 638.
+
+[4 <./dist_pos_vs_neg.pdf> <./roc_gray_vs_edge.pdf>]
 
 LaTeX Warning: Text page 5 contains only floats.
 
-[5 <./roc_gray_vs_edge.pdf> <./dist_gray_vs_edge.pdf>]
-<chart_auc_vs_k.pdf, id=133, 411.5375pt x 321.2pt>
+<chart_auc_vs_k.pdf, id=97, 411.5375pt x 321.2pt>
 File: chart_auc_vs_k.pdf Graphic file (type pdf)
  <use chart_auc_vs_k.pdf>
-<dist_gray_vs_edge_weighted.pdf, id=134, 411.5375pt x 321.2pt>
+<dist_gray_vs_edge_weighted.pdf, id=98, 411.5375pt x 321.2pt>
 File: dist_gray_vs_edge_weighted.pdf Graphic file (type pdf)
 
-<use dist_gray_vs_edge_weighted.pdf> (./paper.bbl [6 <./chart_auc_vs_k.pdf> <./
-dist_gray_vs_edge_weighted.pdf>]
+<use dist_gray_vs_edge_weighted.pdf> [5 <./dist_gray_vs_edge.pdf>] (./paper.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 46.
 )
@@ -243,21 +241,19 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7
-
-] (./paper.aux)
+[6 <./chart_auc_vs_k.pdf> <./dist_gray_vs_edge_weighted.pdf>] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1867 strings out of 493848
- 28702 string characters out of 3149207
- 86057 words of memory out of 3000000
- 5156 multiletter control sequences out of 15000+200000
+ 1865 strings out of 493848
+ 28690 string characters out of 3149207
+ 86051 words of memory out of 3000000
+ 5154 multiletter control sequences out of 15000+200000
  40874 words of font info for 78 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
- 28i,10n,21p,1305b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,10n,21p,1279b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -274,9 +270,9 @@ ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/u
 rw/times/utmbi8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on paper.pdf (7 pages, 1489316 bytes).
+Output written on paper.pdf (6 pages, 1487682 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
+ 219 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

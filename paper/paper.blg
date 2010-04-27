@@ -5,51 +5,50 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: paper.bib
 Warning--entry type for "cbcl" isn't style-file defined
 --line 203 of file paper.bib
-Warning--I didn't find a database entry for "ga"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 9 entries,
+You've used 7 entries,
             4039 wiz_defined-function locations,
-            865 strings with 8525 characters,
-and the built_in function-call counts, 5740 in all, are:
-= -- 488
-> -- 100
-< -- 49
-+ -- 54
-- -- 15
-* -- 272
-:= -- 941
-add.period$ -- 18
-call.type$ -- 9
-change.case$ -- 8
-chr.to.int$ -- 102
-cite$ -- 9
-duplicate$ -- 418
-empty$ -- 449
-format.name$ -- 21
-if$ -- 1281
+            853 strings with 8244 characters,
+and the built_in function-call counts, 4481 in all, are:
+= -- 382
+> -- 74
+< -- 38
++ -- 40
+- -- 11
+* -- 218
+:= -- 744
+add.period$ -- 14
+call.type$ -- 7
+change.case$ -- 6
+chr.to.int$ -- 78
+cite$ -- 7
+duplicate$ -- 327
+empty$ -- 352
+format.name$ -- 15
+if$ -- 996
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 70
-newline$ -- 54
-num.names$ -- 9
-pop$ -- 154
+int.to.str$ -- 7
+missing$ -- 53
+newline$ -- 46
+num.names$ -- 7
+pop$ -- 111
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 449
+skip$ -- 351
 stack$ -- 0
-substring$ -- 245
-swap$ -- 334
-text.length$ -- 15
+substring$ -- 188
+swap$ -- 260
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 9
+type$ -- 7
 warning$ -- 0
-while$ -- 29
-width$ -- 10
-write$ -- 111
-(There were 2 warnings)
+while$ -- 23
+width$ -- 8
+write$ -- 91
+(There was 1 warning)
