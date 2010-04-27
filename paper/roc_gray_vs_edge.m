@@ -9,4 +9,4 @@ plot(1-spece, sense, 'ro-');
 title('Grayscale vs. Edge ROC curves');
 xlabel('False positive rate')
 ylabel('True positive rate');
-legend('Total', 'Positive', 'Negative', 4);
+legend('Total', 'Grayscale', 'Edge', 4);

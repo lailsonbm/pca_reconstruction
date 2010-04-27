@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  26 APR 2010 00:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.12.3)  27 APR 2010 11:20
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -135,18 +135,18 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 ) (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 351.
-LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 350.
+LaTeX Font Info:    ... okay on input line 350.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 350.
+LaTeX Font Info:    ... okay on input line 350.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 350.
+LaTeX Font Info:    ... okay on input line 350.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 350.
+LaTeX Font Info:    ... okay on input line 350.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 350.
+LaTeX Font Info:    ... okay on input line 350.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 350.
+LaTeX Font Info:    ... okay on input line 350.
 
 (/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -162,20 +162,20 @@ LaTeX Font Info:    ... okay on input line 351.
 \everyMPtoPDFconversion=\toks17
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 424.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 423.
 Missing character: There is no Ã in font ptmri7t!
 Missing character: There is no ¡ in font ptmri7t!
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 424.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 423.
 
  (/usr/local/texlive/2009/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 424.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 423.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 424.
+(Font)              <7> on input line 423.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 424.
+(Font)              <5> on input line 423.
 Missing character: There is no Ã in font ptmri7t!
 Missing character: There is no ¡ in font ptmri7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -183,59 +183,55 @@ Missing character: There is no ¨ in font ptmr7t!
  [1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] [2]
+]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Ÿ in font ptmr7t!
+ [2]
 <roc_pos_vs_neg.pdf, id=20, 411.5375pt x 321.2pt>
 File: roc_pos_vs_neg.pdf Graphic file (type pdf)
  <use roc_pos_vs_neg.pdf>
-<dist_pos_vs_neg.pdf, id=21, 281.05pt x 702.625pt>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 587.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 587.
+
+[3 <./roc_pos_vs_neg.pdf>] <dist_pos_vs_neg.pdf, id=39, 281.05pt x 702.625pt>
 File: dist_pos_vs_neg.pdf Graphic file (type pdf)
- <use dist_pos_vs_neg.pdf>
-[3 <./roc_pos_vs_neg.pdf>]
-Underfull \vbox (badness 1442) has occurred while \output is active []
 
-
-<roc_gray_vs_edge.pdf, id=37, 411.5375pt x 321.2pt>
+<use dist_pos_vs_neg.pdf> <roc_gray_vs_edge.pdf, id=40, 411.5375pt x 321.2pt>
 File: roc_gray_vs_edge.pdf Graphic file (type pdf)
- <use roc_gray_vs_edge.pdf>
-<dist_gray_vs_edge.pdf, id=38, 281.05pt x 702.625pt>
+
+<use roc_gray_vs_edge.pdf>
+<dist_gray_vs_edge.pdf, id=41, 281.05pt x 702.625pt>
 File: dist_gray_vs_edge.pdf Graphic file (type pdf)
 
 <use dist_gray_vs_edge.pdf>
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 621.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 621.
+
+LaTeX Warning: Reference `ga' on page 4 undefined on input line 639.
 
 
-LaTeX Warning: Citation `ga' on page 4 undefined on input line 640.
-
-[4 <./dist_pos_vs_neg.pdf> <./roc_gray_vs_edge.pdf>]
-Underfull \vbox (badness 1442) has occurred while \output is active []
+LaTeX Warning: Text page 4 contains only floats.
 
 
-<chart_auc_vs_k.pdf, id=94, 411.5375pt x 321.2pt>
+Overfull \vbox (4.35196pt too high) has occurred while \output is active []
+
+
+[4 <./dist_pos_vs_neg.pdf>]
+
+LaTeX Warning: Text page 5 contains only floats.
+
+[5 <./roc_gray_vs_edge.pdf> <./dist_gray_vs_edge.pdf>]
+<chart_auc_vs_k.pdf, id=133, 411.5375pt x 321.2pt>
 File: chart_auc_vs_k.pdf Graphic file (type pdf)
  <use chart_auc_vs_k.pdf>
-<dist_gray_vs_edge_weighted.pdf, id=95, 411.5375pt x 321.2pt>
+<dist_gray_vs_edge_weighted.pdf, id=134, 411.5375pt x 321.2pt>
 File: dist_gray_vs_edge_weighted.pdf Graphic file (type pdf)
 
-<use dist_gray_vs_edge_weighted.pdf>
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
- [5 <./dist_gray_vs_edge.pdf> <./chart_auc_vs_k.pdf>] (./paper.bbl
+<use dist_gray_vs_edge_weighted.pdf> (./paper.bbl [6 <./chart_auc_vs_k.pdf> <./
+dist_gray_vs_edge_weighted.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 51.
- [6 <./dist_gray_vs_edge_weighted.pdf>])
+(Font)              <9> on input line 46.
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -253,18 +249,15 @@ Before submitting the final camera ready copy, remember to:
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 1869 strings out of 493848
- 28730 string characters out of 3149207
- 87062 words of memory out of 3000000
- 5158 multiletter control sequences out of 15000+200000
+ 1867 strings out of 493848
+ 28702 string characters out of 3149207
+ 86057 words of memory out of 3000000
+ 5156 multiletter control sequences out of 15000+200000
  40874 words of font info for 78 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
- 28i,10n,21p,1218b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,10n,21p,1305b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2009/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -273,16 +266,17 @@ ve/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
 /2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
 009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/200
 9/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2009/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2009/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2009/texm
-f-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2009/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type
-1/urw/times/utmbi8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/tim
-es/utmr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on paper.pdf (7 pages, 1480077 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2009/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2009/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2009/texmf-d
+ist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2009/texmf-dist/fon
+ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/u
+rw/times/utmbi8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on paper.pdf (7 pages, 1489316 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
+ 224 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,3 @@
-
 %% bare_conf.tex
 %% V1.3
 %% 2007/01/11
@@ -352,7 +351,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{An analysis of PCA image reconstruction for classification}
+\title{Investigating PCA image reconstruction for pedestrian detection}
 
 %------------------------------------------------------------------------- 
 % change the % on next lines to produce the final camera-ready version 
@@ -465,7 +464,7 @@ The remaining of the article is divided as follows. Section 2 describes a image 
 
 \section{Image reconstruction with PCA}
 
-The idea of principal component analysis (PCA) seems to have been first proposed by Pearson in 1901 \cite{pearson1901} and was later developed in many works during the last century, being now known as the Karhunen-Loève extension, the Hotelling transform or proper orthogonal decomposition, depending of the field of application \cite{sirovich87}. It was popularized in computer vision by Turk and Pentland, that in 1991 used PCA to propose the eigenfaces \cite{turk91}, a face recognition method still relevant and used in current days. % The paper is currently the most cited work in computer vision.
+The idea of principal component analysis (PCA) seems to have been first proposed by Pearson in 1901 \cite{sirovich87} and was later developed in many works during the last century, being now known as the Karhunen-Loève extension, the Hotelling transform or proper orthogonal decomposition, depending of the field of application \cite{sirovich87}. It was popularized in computer vision by Turk and Pentland, that in 1991 used PCA to propose the eigenfaces \cite{turk91}, a face recognition method still relevant and used in current days. % The paper is currently the most cited work in computer vision.
 
 Given a set of samples, PCA yields a set of orthonormal vectors that can be used to linearly project the samples into a new space. This space maximizes the scatter of the projected samples (their variance) and minimizes the least mean square error, that is, it minimizes the difference between the projected sample and its reconstruction back to the original space \cite{shlens09}. This characteristic also makes PCA suitable for data compression and dimensionality reduction. The data can be anything, but in this work we are concerned only with images.
 
@@ -506,11 +505,9 @@ In general, the more principal components we use to obtain a projection, the les
 
 \section{Classification using reconstruction}
 
-By definition, PCA looks for the set of PCs that best describe the distribution of the data that is being analyzed. Therefore, these PCs are going to preserve better the information of the images from which PCA was performed, or of those that are similar to them \cite{borja09}. For example, consider a set of PCs obtained only from images that contains pedestrians. They must reconstruct better images of other pedestrians than any other type of images. Conversely, if we have a set of PCs obtained from images of anything except pedestrians, the reconstruction of pedestrian images must be poor. This is illustrated in Figure XX, where we show reconstructions of both grayscale images and edge images with different sets of PCs.
+By definition, PCA looks for the set of PCs that best describe the distribution of the data that is being analyzed. Therefore, these PCs are going to preserve better the information of the images from which PCA was performed, or of those that are similar to them \cite{borja09}. For example, consider a set of PCs obtained only from images that contains pedestrians. They must reconstruct better images of other pedestrians than any other type of images. Conversely, if we have a set of PCs obtained from images of anything except pedestrians, the reconstruction of pedestrian images must be poor.
 
-% TODO Figure with Reconstructions
-
-Based on this fact, Borja and Fuentes propose a classifier for pedestrian detection that uses reconstruction errors as the classification criteria \cite{borja09}. In addition to grayscale images, the classifier also use the corresponding computed edge images, since they characterize better the pedestrian silhouette and eliminate background variations, as can be seen in Figure XX. 
+Based on this fact, Borja and Fuentes propose a classifier for pedestrian detection that uses reconstruction errors as the classification criteria \cite{borja09}. In addition to grayscale images, the classifier also use the corresponding computed edge images, since they characterize better the pedestrian silhouette and eliminate background variationsß. 
 
 In the training phase, PCA must be performed separately for four sets of images, what results in the following sets of PCs:
 
@@ -582,45 +579,45 @@ The non-pedestrian images were extracted from 120 assorted pictures that did not
 
 To train the classifier, we selected 75\% of the pedestrian images (693 samples) and the remaining images (231 samples) were used  for testing; from the non-pedestrian images, we selected 80\% of the images (4.000 samples) for training the classifier and the remaining images (1.000 samples) was used for testing. This particular scheme was chosen in a empirical way; it yielded the best results among the distributions we tested. The edge images are computed with $x$ and $y$ Sobel filters \cite{gonzalez01}, which we combine to generate a single edge image. To implement the classifier and the auxiliary procedures, we used the MATLAB 2009b environment. The resulting code is available at \cite{code}.
 
-We start our analysis by investigating the impact of reconstruction errors from the positive PCs and from the negative PCs to the classification. As discussed before, we initially questioned the role of negative PCs, since they are computed from completely uncorrelated images and do not represent a particular object. However, when we classify test sample using reconstruction errors only from the positive PCs or only from the negative PCs (but still using grayscale and edge images), it becomes clear that neither one can perform a satisfactory classification; both classifiers yields a very poor result. But when the errors are combined accordingly to the total reconstruction error expression, then we have an excellent classification. The receiver operating characteristic (ROC) curves of the three classifiers are shown in Figure XX for $k = 100$ (i.e. only the first 100 principal components are being used). We get a similar pattern for all other values of $k$ that were tested.
+We start our analysis by investigating the impact of reconstruction errors from the positive PCs and from the negative PCs to the classification. As discussed before, we initially questioned the role of negative PCs, since they are computed from completely uncorrelated images and do not represent a particular object. However, when we classify test samples using reconstruction errors only from the positive PCs or only from the negative PCs (but still using grayscale and edge images), it becomes clear that neither one can perform a satisfactory classification; both classifiers yields a very poor result. But when the errors are combined accordingly to the total reconstruction error expression, then we have an excellent classification. The receiver operating characteristic (ROC) curves of the three classifiers are shown in Figure~\ref{roc_pos_vs_neg} for $k = 100$. We get a similar pattern for all other values of $k$ that were tested.
 
-\begin{figure}[t]
+\begin{figure}[t!]
 \centering
 \includegraphics[width=3in]{roc_pos_vs_neg}
-\caption{Simulation Results}
+\caption{Comparison of positive and negative ROC curves. From left to right: the first curve (green) refers to a classifier that uses the total reconstruction error (equation \ref{total_error}) and has an AUC of 0.995; the second curve (red) refers to a classifier that uses only the reconstruction errors from negative PCs ($d_{gn}$ and $d_{en}$) and has an AUC of 0.690; and the third curve (blue) refers to a classifier that uses only the errors from positive PCs ($d_{gp}$ and $d_{ep}$) and has an AUC of 0.444. On the three classifiers, only the first 100 principal components are being used, that is, $k=100$. Both positive and negative classifiers yields a poor result, far from the full classifier performance. It is surprising to see that the negative classifier even got a better result than the positive one.}
 \label{roc_pos_vs_neg}
 \end{figure}
-% It is surprising to see that the classifier from negative PCs even has a better performance than the classifier from positive PCs.
 
-To understand why this happens, it is interesting to see how the reconstruction errors are distributed. In Figure XX, we plot the reconstruction error of each individual test sample in the three situations previously described: in the first plot only the errors from positive PCs are considered, in the second plot only errors from negative PCs are considered and in the third plot we used the total error. It is easy to see that the samples are mixed on the two first plots, indicating that these criteria do not have discriminatory power to correctly separate the samples. Conversely, when the errors are combined, the distribution changes completely and we can notice that samples from different classes are in fact grouped, what makes possible the high classification accuracy we have gotten. Hence, the reconstruction errors from both positive and negative PCs contribute in a significant way to the classification and none of them can be removed.
+To understand why this happens, it is interesting to see how the reconstruction errors are distributed. In Figure~\ref{dist_pos_vs_neg}, we plot the reconstruction error of each individual test sample in the three situations previously described: in the first plot only the errors from positive PCs are considered, in the second plot only errors from negative PCs are considered and in the third plot we used the total error. It is easy to see that the samples are mixed on the two first plots, indicating that these criteria do not have discriminatory power to correctly separate the samples. Conversely, when the errors are combined, the distribution changes completely and we can notice that samples from different classes are in fact grouped, what makes possible the high classification accuracy we have gotten. Hence, the reconstruction errors from both positive and negative PCs contribute in a significant way to the classification and none of them can be removed.
 
-\begin{figure}[t]
+\begin{figure}[t!]
 \centering
 \includegraphics[width=3in]{dist_pos_vs_neg}
-\caption{Simulation Results}
+\caption{Comparison of reconstruction errors distributions. The first chart plots the errors of train samples when only the reconstructions from positive PCs are being considered. The second chart plots the errors only for the negative reconstructions. And the third chart plots the distribution of the total reconstruction error. Note that the errors are mixed on the first two charts; classify the samples based on them is a hard task. On the other hand, the third chart show well defined clusters of errors, what makes possible a good classification. This explains the curves of Figure~\ref{roc_pos_vs_neg}.}
 \label{dist_pos_vs_neg}
 \end{figure}
 
-On the other hand, we get very similar ROC curves when the classification considers the reconstruction errors from grayscale PCs and from edge PCs separately (now always using the errors from positive PCs and from negative PCs together). This in shown in Figure XX, which exhibit three ROC curves: one from the classifier that uses only grayscale errors, one from the classifier that uses only edge errors and one from the classifier that considers both (i.e. the total error), all using $k = 100$. Note that the ROC curves from the edge error classifier and from the total error classifier are nearly indistinguishable. In fact, their area under the curve (AUC) are practically equal.
+On the other hand, we get very similar ROC curves when the classification considers the reconstruction errors from grayscale PCs and from edge PCs separately (now always using the errors from positive PCs and from negative PCs together). This in shown in Figure~\ref{roc_gray_vs_edge}, which exhibit three ROC curves: one from the classifier that uses only grayscale errors, one from the classifier that uses only edge errors and one from the classifier that considers both (i.e. the total error), all using $k = 100$. Note that the ROC curves from the edge error classifier and from the total error classifier are nearly indistinguishable. In fact, their area under the curve (AUC) are practically equal.
 
-\begin{figure}[t]
+\begin{figure}[t!]
 \centering
 \includegraphics[width=3in]{roc_gray_vs_edge}
-\caption{Simulation Results}
+\caption{Comparison of grayscale and edge ROC curves. The green curve refers to a classifier that uses the total reconstruction error (equation \ref{total_error}) and has an AUC of 0.995; the red curve refers to a classifier that uses only the reconstruction errors from edge PCs ($d_{ep}$ and $d_{en}$) and has an AUC of 0.994; and the blue curve uses only the errors from grayscale PCs ($d_{gp}$ and $d_{gn}$) and has an AUC of 0.985. On the three classifiers, only the first 100 principal components are being used, that is, $k=100$. Note that the scale is different of that from Figure~\ref{roc_pos_vs_neg}; we approximated the upper left corner to better show the difference between the curves, that are very similar.}
 \label{roc_gray_vs_edge}
 \end{figure}
 
-Again, we plot the reconstruction error distributions, but now segregating error from grayscale PCs and from edges PCs. These plots are shown in Figure XX, that also displays a plot of the combined errors distribution (i.e. grayscale and edge errors summed). At this time, we get a different scenario. All the three plots exhibit a clear boundary that separate samples from different classes. This indicate that there is a lot of redundancy between errors from grayscale PCs and from edge PCs and one of them can be safely removed from the classifier with just a minor impact on classification accuracy. Our results indicate that the errors from grayscale PCs generally yields a slightly worse result, as shown in the Table XX. Therefore, it is possible to compose a classifier only with the edge errors and speed up the classification significantly (since two reconstructions will not have to be computed anymore). In general, such classifier drops the classification accuracy in less than $1\%$ when compared with a classifier that uses the total error. Actually, the classifier based only on the edge errors sometimes performs even better in our experiments (when $k >= 200$), as also shown in Table XX.
+Again, we plot the reconstruction error distributions, but now segregating errors from grayscale PCs and from edges PCs. These plots are shown in Figure~\ref{dist_gray_vs_edge}, that also displays a plot of the combined errors distribution (i.e. grayscale and edge errors summed). At this time, we get a different scenario. All the three plots exhibit a clear boundary that separate samples from different classes. This indicate that there is a lot of redundancy between errors from grayscale PCs and from edge PCs and one of them can be safely removed from the classifier with just a minor impact on classification accuracy. Our results indicate that the errors from grayscale PCs generally yields a slightly worse result, as shown in the Table~\ref{table_gray_vs_edge}. Therefore, it is possible to compose a classifier only with the edge errors and speed up the classification significantly (since two reconstructions will not have to be computed anymore). In general, such classifier drops the classification accuracy in less than $1\%$ when compared with a classifier that uses the total error. Actually, the classifier based only on the edge errors sometimes performs even better in our experiments (when $k >= 200$), as also shown in Table~\ref{table_gray_vs_edge}.
 
-\begin{figure}[t]
+\begin{figure}[tl!]
 \centering
 \includegraphics[width=3in]{dist_gray_vs_edge}
-\caption{Simulation Results}
+\caption{Comparison of reconstruction errors distributions. The first chart plots the errors of positive and negative train samples when only the reconstructions from grayscale PCs are being considered. The second chart plots the errors only for the edge reconstructions. And the third chart plots the distribution of the total reconstruction error. Note that the three charts show a clear boundary between errors from positive and from negative samples.}
 \label{dist_gray_vs_edge}
 \end{figure}
 
-\begin{table}
-  \caption{Comparison of area under the curve (AUC) of the classifiers based on grayscale error, edge error, and total error, respectively, for many values of $k$. The AUCs of the edge-based classifier are always larger then the grayscale-based classifier. This indicates edge errors are more relevant to the classification.}
+\begin{table}[b]
+  \caption{AUCs for grayscale, edge and total errors classifiers}
+  %{Comparison of area under the curve (AUC) of the classifiers based on grayscale error, edge error, and total error, respectively, for many values of $k$. The AUCs of the edge-based classifier are always larger then the grayscale-based classifier. This indicates edge errors are more relevant to the classification.}
   \begin{center}
     \begin{tabular}{  c | c  c  c  }
       \hline
@@ -639,44 +636,45 @@ Again, we plot the reconstruction error distributions, but now segregating error
 \end{table}
 
 % What reference use to GA?
-These findings also point out that, among all the four reconstruction errors, some are more relevant to the classification than others. However, on the total reconstruction error (equation \ref{total_error}) each error contributes equally. So, we use the weighted total reconstruction error (equation \ref{weighted_total_error}) to improve the classification accuracy. The problem with using weights is how to choose them. We can try some values and make adjusts manually, test after test. But we can also employ an optimization algorithm that looks for the values in an automated way. In this work, we use a genetic algorithm \cite{ga}. It initially chooses a set of random values and uses operations as crossover, mutation and selection to improve them during many iterations. These operations are inspired by evolutionary biology; hence the name genetic algorithms. The values are adjusted in relation to a fitness function. In our case, this functions aims to correctly classify the largest number of training samples using a given set of weights. The function can be fine-tuned in order to give more importance in finding more pedestrians despite the false detections or to minimize the number of non pedestrians classified as pedestrians.
+These findings also point out that, among all the four reconstruction errors, some are more relevant to the classification than others. However, on the total reconstruction error (equation \ref{total_error}) each error contributes equally. So, we use the weighted total reconstruction error (equation \ref{weighted_total_error}) to improve the classification accuracy. The problem with using weights is how to choose them. We can try some values and make adjusts manually, test after test. But we can also employ an optimization algorithm that looks for the values in an automated way. In this work, we use a genetic algorithm \ref{ga}. It initially chooses a set of random values and uses operations as crossover, mutation and selection to improve them during many iterations. These operations are inspired by evolutionary biology; hence the name genetic algorithms. The values are adjusted in relation to a fitness function. In our case, this functions aims to correctly classify the largest number of training samples using a given set of weights. The function can be fine-tuned in order to give more importance in finding more pedestrians despite the false detections or to minimize the number of non-pedestrians classified as pedestrians.
 
-As this algorithm performs a local optimization and therefore is not optimum, we have run it five times for each value of $k$. We then have chosen the set of weights that gets the best classification rates among these five; they are listed on Table XX. Finally, we classify the test samples considering the weighted total reconstruction error. The produced ROC curves always have a larger AUC than the corresponding versions without weights for all values of $k$ we tested. This is shown in Figure XX. The difference is more pronounced for large values of $k$ and becomes small when it diminishes. Still, the AUC of the first classifier is always larger, what indicates that the weighted error is a better classification criteria than the non-weighted one. The chart of Figure XX also shows that the AUC of the weighted classifier is more stable when $k$ varies.
+As this algorithm performs a local optimization and therefore is not optimum, we have run it five times for each value of $k$. We then have chosen the set of weights that gets the best classification rates among these five. Finally, we classify the test samples considering the weighted total reconstruction error. The produced ROC curves always have a larger AUC than the corresponding versions without weights for all values of $k$ we tested. This is shown in Figure~\ref{auc_vs_k}. The difference is more pronounced for large values of $k$ and becomes small when it diminishes. Still, the AUC of the first classifier is always larger, what indicates that the weighted error is a better classification criteria than the non-weighted one. As usual, we plotted the distribution of the weighted total reconstruction error, that can be seen of Figure~\ref{dist_weighted}. This time, we get a clear boundary between errors from samples of different classes.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=3in]{chart_auc_vs_k}
-\caption{Simulation Results}
+\caption{Comparison of weighted and original classifiers AUCs for different values of $k$. The AUCs of the weighted classifier are more stable when $k$ varies.}
 \label{auc_vs_k}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=3in]{dist_gray_vs_edge_weighted}
-\caption{Simulation Results}
+\caption{Distribution of the weighted total reconstruction errors for positive and for negative training samples, for $k=100$. Compare it with the third chart of Figure~\ref{dist_pos_vs_neg}. Here the boundary between errors from positive and from negative samples is much clearer.}
 \label{dist_weighted}
 \end{figure}
 
 % The better value of k depends on the particular application
 
-\begin{table}
-  \caption{Weights that produced best classification rates for each value of $k$. Note that the weights associated to edge errors are usually larger than the errors associated to grayscale errors, what reinforces the greater importance of the edge errors to the classification.}
-  \begin{center}
-    \begin{tabular}{  c | c  c  c  c  }
-      \hline
-      $k$ & $w_{gp}$ & $w_{ep}$ & $w_{gn}$ & $w_{en}$ \\
-      \hline
-      400 & 0.4456 & 0.5472 & 0.2785 & 0.9340 \\
-      300 & 1.6523 & 0.7827 & 0.9183 & 2.2065 \\
-      200 & 0.3101 & 0.6551 & 0.1338 & 0.9962 \\
-      100 & 0.8472 & 1.3322 & 0.7671 & 1.5308 \\
-      50  & 0.2236 & 0.8294 & 0.1905 & 0.9043 \\
-      25  & 0.9172 & 1.1696 & 0.7768 & 1.4662 \\
-      \hline  
-    \end{tabular}
-  \end{center}
-  \label{table-weights}
-\end{table}
+% \begin{table}
+%   \caption{Selected weights}
+%   %{Weights that produced best classification rates for each value of $k$. Note that the weights associated to edge errors are usually larger than the errors associated to grayscale errors, what reinforces the greater importance of the edge errors to the classification.}
+%   \begin{center}
+%     \begin{tabular}{  c | c  c  c  c  }
+%       \hline
+%       $k$ & $w_{gp}$ & $w_{ep}$ & $w_{gn}$ & $w_{en}$ \\
+%       \hline
+%       400 & 0.4456 & 0.5472 & 0.2785 & 0.9340 \\
+%       300 & 1.6523 & 0.7827 & 0.9183 & 2.2065 \\
+%       200 & 0.3101 & 0.6551 & 0.1338 & 0.9962 \\
+%       100 & 0.8472 & 1.3322 & 0.7671 & 1.5308 \\
+%       50  & 0.2236 & 0.8294 & 0.1905 & 0.9043 \\
+%       25  & 0.9172 & 1.1696 & 0.7768 & 1.4662 \\
+%       \hline  
+%     \end{tabular}
+%   \end{center}
+%   \label{table_weights}
+% \end{table}
 
 % k pgp pep pgn pen Total AUC Weighted AUC
 % 400 0.4456  0.5472  0.2785  0.9340  0.9744  0.9981
@@ -753,7 +751,7 @@ As this algorithm performs a local optimization and therefore is not optimum, we
 %\label{table_example}
 %\centering
 %% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
+%% than the plain LaTeX2e2e tabular which is used here.
 %\begin{tabular}{|c||c|}
 %\hline
 %One & Two\\
@@ -779,7 +777,7 @@ In this work we analyzed a classifier that uses PCA image reconstruction for ped
 
 To understand how the individual errors contribute to the overall performance, we compared two classifiers: one that uses only the reconstructions from the positive PCs and other that uses only the reconstructions from the negative PCs. In our experiments, both performed poorly when compared to the full classifier, indicating that positives and negatives reconstructions are indeed relevant to the classification. The crucial role of the reconstructions from negative PCs is particularly surprising, since non-pedestrian samples are not related and do not contain a specific pattern. Therefore, we conclude that the importance of the negative reconstructions is not on what they characterize, but instead on what they do not characterize. In this way, the negative reconstruction errors contribute to raise the total reconstruction error when the image does not contains a pedestrian, what makes possible a better classification.
 
-We also investigated the relevance of grayscale and edges errors. In other experiment we compared the accuracy of a classifier that uses only grayscale reconstructions and other classifier that uses only edge reconstructions. This time, they performed very well, with a performance close to the that of the total error classifier. This suggest that there is a lot of redundancy between grayscale and edge information. The classifier based only on edge images got better results, indicating that edge information is more relevant to this classifier than grayscale information. In fact, the edge classifier performed better than the total error classifier itself for some number of PCs and, when the results were worse, the difference between their accuracy was less than 1\%. For this reason, it is possible to speed up the classification time in a significant way by using only edge information and keep the classification accuracy virtually the same.
+We also investigated the relevance of grayscale and edge errors. In other experiment we compared the accuracy of a classifier that uses only grayscale reconstructions and other classifier that uses only edge reconstructions. This time, they performed very well, with a performance close to the that of the total error classifier. This suggest that there is a lot of redundancy between grayscale and edge information. The classifier based only on edge images got better results, indicating that edge information is more relevant to this classifier than grayscale information. In fact, the edge classifier performed better than the total error classifier itself for some number of PCs and, when the results were worse, the difference between their accuracy was less than 1\%. For this reason, it is possible to speed up the classification time in a significant way by using only edge information and keep the classification accuracy virtually the same.
 
 Since our experiments show that each error has a different relevance for classification, we proposed a classifier that uses a weighted version of the total reconstruction error. The problem with weights, though, is how to find the best values. To get an approximation in an automated way, we used a genetic algorithm with a fitness function that aims the best classification rates for the training samples. This classified performed better than the original version in our experiments for all numbers of PCs we tested. % DESCRIBE CLASSIFICATION RATE VS K
 

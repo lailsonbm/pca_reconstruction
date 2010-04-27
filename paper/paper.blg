@@ -11,45 +11,45 @@ Warning--I didn't find a database entry for "ga"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 10 entries,
+You've used 9 entries,
             4039 wiz_defined-function locations,
-            873 strings with 8675 characters,
-and the built_in function-call counts, 6596 in all, are:
-= -- 566
-> -- 112
-< -- 60
-+ -- 62
-- -- 16
-* -- 312
-:= -- 1075
-add.period$ -- 20
-call.type$ -- 10
-change.case$ -- 9
-chr.to.int$ -- 126
-cite$ -- 10
-duplicate$ -- 477
-empty$ -- 509
-format.name$ -- 22
-if$ -- 1478
+            865 strings with 8525 characters,
+and the built_in function-call counts, 5740 in all, are:
+= -- 488
+> -- 100
+< -- 49
++ -- 54
+- -- 15
+* -- 272
+:= -- 941
+add.period$ -- 18
+call.type$ -- 9
+change.case$ -- 8
+chr.to.int$ -- 102
+cite$ -- 9
+duplicate$ -- 418
+empty$ -- 449
+format.name$ -- 21
+if$ -- 1281
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 78
-newline$ -- 57
-num.names$ -- 10
-pop$ -- 165
+int.to.str$ -- 9
+missing$ -- 70
+newline$ -- 54
+num.names$ -- 9
+pop$ -- 154
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 517
+skip$ -- 449
 stack$ -- 0
-substring$ -- 302
-swap$ -- 389
-text.length$ -- 18
+substring$ -- 245
+swap$ -- 334
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 10
+type$ -- 9
 warning$ -- 0
-while$ -- 34
-width$ -- 12
-write$ -- 122
+while$ -- 29
+width$ -- 10
+write$ -- 111
 (There were 2 warnings)
