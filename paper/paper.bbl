@@ -37,7 +37,7 @@ M.~Turk and A.~Pentland, ``{Eigenfaces for recognition},'' \emph{Journal of
 
 \bibitem{shlens09}
 J.~Shlens, ``{A Tutorial on Principal Component Analysis},'' \emph{Systems
-  Neurobiology Laboratory, Salk Insitute for Biological Studies}, 2009.
+  Neurobiology Laboratory}, 2009.
 
 \bibitem{cbcl}
 \BIBentryALTinterwordspacing
@@ -51,9 +51,12 @@ X.~Jiang, ``Asymmetric principal component and discriminant analyses for
   pattern classification,'' \emph{IEEE Transactions on Pattern Analysis and
   Machine Intelligence}, vol.~31, no.~5, pp. 931--937, 2009.
 
-\bibitem{gonzalez01}
+\bibitem{gonzalez07}
 R.~C. Gonzalez and R.~E. Woods, \emph{Digital Image Processing}.\hskip 1em plus
-  0.5em minus 0.4em\relax Boston, MA, USA: Addison-Wesley Longman Publishing
-  Co., Inc., 2001.
+  0.5em minus 0.4em\relax Boston, MA, USA: Prentice Hall, 3rd edition, 2007.
+
+\bibitem{goldberg89}
+D.~Goldberg, ``{Genetic Algorithms in Search Optimization and Machine Learning,
+  0201157675},'' 1989.
 
 \end{thebibliography}
