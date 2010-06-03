@@ -1,3 +1,5 @@
+% Saves all reconstructions on dstpath.
+
 load_paths;
 load_pcs;
 
