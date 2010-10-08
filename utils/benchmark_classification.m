@@ -20,21 +20,21 @@ for j = 1:iterations
     image = double(imread(paths{i}));
   
     tic;
-    edge = sobel(image);
+    % edge = sobel(image);
   
     image = reshape(image,numel(image),1);
-    edge = reshape(edge,numel(edge),1);
+    % edge = reshape(edge,numel(edge),1);
   
     dgp = reconstruction_error(image,Pgpx,mngp);
-    dep = reconstruction_error(edge,Pepx,mnep);
+    % dep = reconstruction_error(edge,Pepx,mnep);
     dgn = reconstruction_error(image,Pgnx,mngn);
-    den = reconstruction_error(edge,Penx,mnen);
+    % den = reconstruction_error(edge,Penx,mnen);
   
-    dt = dgn + den - dgp - dep;
-    % dg = dgn - dgp;
+    % dt = dgn + den - dgp - dep;
+    dg = dgn - dgp;
     % de = den - dep;
   
-    if de > 0
+    if dg > 0
       % pedestrian
     else
       % non-pedestrian

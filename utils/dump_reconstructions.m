@@ -7,14 +7,20 @@ pedpaths = dir_filenames('data/samples/train/pedestrians', '\.jpg', true);
 nonpaths = dir_filenames('data/samples/train/nonpedestrians', '\.jpg', true);
 
 srcpaths = [pedpaths nonpaths];
-dstpath = 'data/reconstructions';
+dstpath = sprintf('data/%s/reconstructions', edge_method);
 dstpathfmt = '%s/k=%d/%s/%s_%s.%s'; % dstpath, k, folder, filename, rectype, extension
 
 for i = 1:size(srcpaths,2)
   disp(sprintf('Processing image %s...', srcpaths{i}));
   
   image = double(imread(srcpaths{i}));
-  edge = sobel(image);
+  if strcmpi(edge_method, 'sobel')
+		edge = sobel(image); % scale(sobel(image)) * 255;
+	elseif strcmpi(edge_method, 'canny')
+		edge = canny(image);
+	else
+		error('Invalid edge method.');
+	end
 
   imsize = size(image);
   image = reshape(image,numel(image),1);

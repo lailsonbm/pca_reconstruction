@@ -1,8 +1,8 @@
 % Mix train and test sample images.
 
 disp('Reading pedestrian list...');
-train_paths = dir_filenames('data/train/pedestrians', '\.jpg$', true);
-test_paths = dir_filenames('data/test/pedestrians', '\.jpg$', true);
+train_paths = dir_filenames('data/samples/train/pedestrians', '\.jpg$', true);
+test_paths = dir_filenames('data/samples/test/pedestrians', '\.jpg$', true);
 
 disp('Shuffling pedestrian list...');
 paths = {train_paths{:} test_paths{:}};
@@ -26,8 +26,8 @@ clear train_target test_target;
 %%
 
 disp('Reading non-pedestrian list...');
-train_paths = dir_filenames('data/train/nonpedestrians', '\.jpg$', true);
-test_paths = dir_filenames('data/test/nonpedestrians', '\.jpg$', true);
+train_paths = dir_filenames('data/samples/train/nonpedestrians', '\.jpg$', true);
+test_paths = dir_filenames('data/samples/test/nonpedestrians', '\.jpg$', true);
 
 disp('Shuffling non-pedestrian list...');
 paths = {train_paths{:} test_paths{:}};

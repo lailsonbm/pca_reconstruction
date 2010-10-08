@@ -16,7 +16,13 @@ for s = 1:numel(scales)
 	
 	disp(sprintf('Scaling image to %.2f...', scale));
 	scaled_image = imresize(image, scale);
-	scaled_edge = sobel(scaled_image);
+	if strcmpi(edge_method, 'sobel')
+		scaled_edge = sobel(scaled_image); % scale(sobel(image)) * 255;
+	elseif strcmpi(edge_method, 'canny')
+		scaled_edge = canny(scaled_image);
+	else
+		error('Invalid edge method.');
+	end
 	
 	% Scanning image
 	[windows,results] = slide_window(scaled_image, scaled_edge, total_errors);
@@ -38,6 +44,6 @@ clear i s;
 
 [~,~,~,~,groups,~,~] = regexp(image_path, '([A-Za-z0-9-]+)\.\w{3}');
 image_name = groups{1}{1};
-save(sprintf('data/captures/%s.mat', image_name), 'errors_scales', 'windows_scales');
+save(sprintf('data/%s/captures/%s.mat', edge_method, image_name), 'errors_scales', 'windows_scales');
 
 clear image image_name groups;

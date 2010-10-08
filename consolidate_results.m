@@ -9,7 +9,7 @@ end
 tn = 0;
 fp = 0;
 
-scores_paths = dir_filenames('data/captures', '\.mat', true);
+scores_paths = dir_filenames(sprintf('data/%s/captures', edge_method), '\.mat', true);
 for i = 1:numel(scores_paths)
 	load(scores_paths{i});	
 	disp(sprintf('Processing file %s...', scores_paths{i}));

@@ -28,7 +28,7 @@ scores = [pederr(:); nonerr(:)];
 classes = [true(numel(pederr), 1); false(numel(nonerr), 1)];
 auc_tot = rocplot(scores, classes);
 title('ROC of classification based total error');
-print('data/charts/roc_total.pdf', '-dpdf');
+print(sprintf('data/%s/charts/roc_total.pdf', edge_method), '-dpdf');
 close;
 
 display_classification_summary(k,threshold,tp,fn,tn,fp,auc_tot);
@@ -53,7 +53,7 @@ scores = [pederr(:); nonerr(:)];
 classes = [true(numel(pederr), 1); false(numel(nonerr), 1)];
 auc_neg = rocplot(scores, classes);
 title('ROC of classification based on grayscale PCs only');
-print('data/charts/roc_grayscale.pdf', '-dpdf');
+print(sprintf('data/%s/charts/roc_grayscale.pdf', edge_method), '-dpdf');
 close;
 
 display_classification_summary(k,threshold,tp,fn,tn,fp,auc_neg);
@@ -78,7 +78,7 @@ scores = [pederr(:); nonerr(:)];
 classes = [true(numel(pederr), 1); false(numel(nonerr), 1)];
 auc_neg = rocplot(scores, classes);
 title('ROC of classification based on edge PCs only');
-print('data/charts/roc_edge.pdf', '-dpdf');
+print(sprintf('data/%s/charts/roc_edge.pdf', edge_method), '-dpdf');
 close;
 
 display_classification_summary(k,threshold,tp,fn,tn,fp,auc_neg);
@@ -105,7 +105,7 @@ scores = [pederr(:); nonerr(:)];
 classes = [true(numel(pederr), 1); false(numel(nonerr), 1)];
 auc_pos = rocplot(scores, classes);
 title('ROC of classification based on positive PCs only');
-print('data/charts/roc_positive.pdf', '-dpdf');
+print(sprintf('data/%s/charts/roc_positive.pdf', edge_method), '-dpdf');
 close;
 
 display_classification_summary(k,threshold,tp,fn,tn,fp,auc_pos);
@@ -130,7 +130,7 @@ scores = [pederr(:); nonerr(:)];
 classes = [true(numel(pederr), 1); false(numel(nonerr), 1)];
 auc_neg = rocplot(scores, classes);
 title('ROC of classification based on negative PCs only');
-print('data/charts/roc_negative.pdf', '-dpdf');
+print(sprintf('data/%s/charts/roc_negative.pdf', edge_method), '-dpdf');
 close;
 
 display_classification_summary(k,threshold,tp,fn,tn,fp,auc_neg);
@@ -158,7 +158,7 @@ scores = [pederr(:); nonerr(:)];
 classes = [true(numel(pederr), 1); false(numel(nonerr), 1)];
 auc_tot = rocplot(scores, classes);
 title('ROC of classification based weighted total error');
-print('data/charts/roc_total_weighted.pdf', '-dpdf');
+print(sprintf('data/%s/charts/roc_total_weighted.pdf', edge_method), '-dpdf');
 close;
 
 display_classification_summary(k,threshold,tp,fn,tn,fp,auc_tot);

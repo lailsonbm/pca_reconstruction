@@ -13,7 +13,13 @@ t = -100;
 
 for i = 1:size(paths,2)
   image = double(imread(paths{i}));
-  edge = sobel(image);
+  if strcmpi(edge_method, 'sobel')
+		edge = sobel(image); % scale(sobel(image)) * 255;
+	elseif strcmpi(edge_method, 'canny')
+		edge = canny(image);
+	else
+		error('Invalid edge method.');
+	end
 
   image = reshape(image,numel(image),1);
   edge = reshape(edge,numel(edge),1);

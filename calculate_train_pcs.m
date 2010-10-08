@@ -19,7 +19,7 @@ disp 'Computing pedestrians grayscale PCA...'
 disp 'Saving pedestrians grayscale PCAs...'
 Pgp = Pgp(:,1:numpcs);
 Vgp = Vgp(1:numpcs);
-save data/pgp.mat Pgp Vgp mngp;
+save(sprintf('data/%s/pgp.mat', edge_method), 'Pgp', 'Vgp', 'mngp');
 
 disp 'Clearing workspace...'
 clear Pgp;
@@ -37,7 +37,7 @@ disp 'Computing pedestrians edge PCA...'
 disp 'Saving pedestrians edge PCAs...'
 Pep = Pep(:,1:numpcs);
 Vep = Vep(1:numpcs);
-save data/pep.mat Pep Vep mnep;
+save(sprintf('data/%s/pep.mat', edge_method), 'Pep', 'Vep', 'mnep');
 
 disp 'Clearing workspace...'
 clear Pep;
@@ -57,7 +57,7 @@ disp 'Computing non-pedestrians grayscale PCA...'
 disp 'Saving non-pedestrians grayscale PCAs...'
 Pgn = Pgn(:,1:numpcs);
 Vgn = Vgn(1:numpcs);
-save data/pgn.mat Pgn Vgn mngn;
+save(sprintf('data/%s/pgn.mat', edge_method), 'Pgn', 'Vgn', 'mngn');
 
 disp 'Clearing workspace...'
 clear Pgn;
@@ -75,7 +75,7 @@ disp 'Computing non-pedestrians edge PCA...'
 disp 'Saving non-pedestrians edge PCAs...'
 Pen = Pen(:,1:numpcs);
 Ven = Ven(1:numpcs);
-save data/pen.mat Pen Ven mnen;
+save(sprintf('data/%s/pen.mat', edge_method), 'Pen', 'Ven', 'mnen');
 
 disp 'Clearing workspace...'
 clear Pen;
