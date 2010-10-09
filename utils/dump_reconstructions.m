@@ -14,13 +14,7 @@ for i = 1:size(srcpaths,2)
   disp(sprintf('Processing image %s...', srcpaths{i}));
   
   image = double(imread(srcpaths{i}));
-  if strcmpi(edge_method, 'sobel')
-		edge = sobel(image); % scale(sobel(image)) * 255;
-	elseif strcmpi(edge_method, 'canny')
-		edge = canny(image);
-	else
-		error('Invalid edge method.');
-	end
+  edge = compute_edge(image, edge_method);
 
   imsize = size(image);
   image = reshape(image,numel(image),1);

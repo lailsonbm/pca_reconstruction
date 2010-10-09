@@ -16,13 +16,7 @@ for s = 1:numel(scales)
 	
 	disp(sprintf('Scaling image to %.2f...', scale));
 	scaled_image = imresize(image, scale);
-	if strcmpi(edge_method, 'sobel')
-		scaled_edge = sobel(scaled_image); % scale(sobel(image)) * 255;
-	elseif strcmpi(edge_method, 'canny')
-		scaled_edge = canny(scaled_image);
-	else
-		error('Invalid edge method.');
-	end
+	edge = compute_edge(image, edge_method);
 	
 	% Scanning image
 	[windows,results] = slide_window(scaled_image, scaled_edge, total_errors);

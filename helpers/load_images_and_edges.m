@@ -5,13 +5,7 @@ images = [];
 edges = [];
 for i = 1:size(paths,2)
 	image = double(imread(paths{i}));
-	if strcmpi(edge_method, 'sobel')
-		edge = sobel(image); % scale(sobel(image)) * 255;
-	elseif strcmpi(edge_method, 'canny')
-		edge = canny(image);
-	else
-		error('Invalid edge method.');
-	end
+	edge = compute_edge(image, edge_method);
 	
 	if isempty(images) || isempty(edges)
 		images = zeros(numel(image),size(paths,2));
