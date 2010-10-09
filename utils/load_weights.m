@@ -1,2 +1,2 @@
 clear weights;
-load(sprintf('data/%s/weights.mat', edge_method));
+load(sprintf('data/%s/weights_%d.mat', edge_method, k));
